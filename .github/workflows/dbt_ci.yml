@@ -18,11 +18,10 @@ jobs:
           version: "latest"
 
       - name: Install dependencies
-        working-directory: dbt_enhanced
         run: uv sync
 
       - name: Run dbt build
-        working-directory: dbt_enhanced/dbt_ecommerce
+        working-directory: dbt_ecommerce
         run: uv run dbt build
         env:
           DBT_PROFILES_DIR: .
