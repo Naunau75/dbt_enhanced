@@ -1,0 +1,6 @@
+dbt_ecommerce:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+  target: dev
