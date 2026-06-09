@@ -154,3 +154,35 @@ Happy modeling!
 [0m11:12:33.537564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8d02c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3a1370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0baea0>]}
 [0m11:12:33.537865 [debug] [MainThread]: Flushing usage events
 [0m11:12:34.007997 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:00:53.489380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be0fb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c017fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c017ce0>]}
+
+
+============================== 15:00:53.493669 | ea6957c7-7fea-4f7c-949e-cd8ca8f674bd ==============================
+[0m15:00:53.493669 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:00:53.494133 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt docs generate', 'version_check': 'True', 'log_path': 'logs', 'partial_parse': 'True', 'warn_error': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'empty': 'None', 'no_print': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'introspect': 'True', 'profiles_dir': '/Users/christophethibault/.dbt', 'debug': 'False', 'write_json': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'target_path': 'None', 'quiet': 'False'}
+[0m15:00:53.494601 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/christophethibault/Projets/DBTNew/dbt_enhanced/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:00:53.495040 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.07529838, "process_in_blocks": "0", "process_kernel_time": 0.205559, "process_mem_max_rss": "111362048", "process_out_blocks": "0", "process_user_time": 1.005182}
+[0m15:00:53.495463 [debug] [MainThread]: Command `dbt docs generate` failed at 15:00:53.495391 after 0.08 seconds
+[0m15:00:53.495720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c017dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c017f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c017bf0>]}
+[0m15:00:53.495971 [debug] [MainThread]: Flushing usage events
+[0m15:00:53.988076 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:00:55.397661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da2e030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0dc710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0dc3b0>]}
+
+
+============================== 15:00:55.400986 | f74e080b-f7c0-4faf-807e-e34a2f213371 ==============================
+[0m15:00:55.400986 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:00:55.401439 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/christophethibault/.dbt', 'version_check': 'True', 'log_path': 'logs', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'debug': 'False', 'invocation_command': 'dbt docs serve', 'no_print': 'None', 'empty': 'None', 'log_format': 'default', 'target_path': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'printer_width': '80', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'quiet': 'False'}
+[0m15:00:55.401882 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/christophethibault/Projets/DBTNew/dbt_enhanced/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:00:55.402322 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 0.06428917, "process_in_blocks": "0", "process_kernel_time": 0.149365, "process_mem_max_rss": "110903296", "process_out_blocks": "0", "process_user_time": 1.006527}
+[0m15:00:55.402701 [debug] [MainThread]: Command `dbt docs serve` failed at 15:00:55.402633 after 0.06 seconds
+[0m15:00:55.402950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d840140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df5ba70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0dc710>]}
+[0m15:00:55.403187 [debug] [MainThread]: Flushing usage events
+[0m15:00:55.821177 [debug] [MainThread]: An error was encountered while trying to flush usage events

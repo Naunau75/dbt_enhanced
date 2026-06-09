@@ -13,7 +13,7 @@ with orders as (
 final as (
     select
         date_trunc('month', cast(order_date as date)) as order_month,
-        sum(total_amount_in_euros) as monthly_revenue
+        sum(total_amount_in_euros)*2 as monthly_revenue
     from orders
     group by 1
 )
