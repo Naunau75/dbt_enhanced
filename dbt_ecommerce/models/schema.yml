@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Staging table pour les clients."
+    columns:
+      - name: customer_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_products
+    description: "Staging table pour les produits."
+    columns:
+      - name: product_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    description: "Staging table pour les commandes."
+    columns:
+      - name: order_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+      - name: order_status
+        description: "Statut de la commande"
+        tests:
+          - accepted_values:
+              values: ['completed', 'returned', 'pending']
+
+  - name: stg_payments
+    description: "Staging table pour les paiements."
+    columns:
+      - name: payment_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+      - name: is_successful
+        description: "Booléen si le paiement a un montant > 0"
+
+  - name: int_orders_payments
+    description: "Table intermédiaire pour joindre commandes et paiements agrégés."
+    columns:
+      - name: order_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_customers
+    description: "Dimension des clients."
+    columns:
+      - name: customer_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: "Dimension des produits."
+    columns:
+      - name: product_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    description: "Table de faits des commandes, matérialisée en incrémental."
+    columns:
+      - name: order_id
+        description: "Clé primaire"
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_monthly_revenue
+    description: "Revenu mensuel agrégé, exporté en CSV."
